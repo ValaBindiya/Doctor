@@ -132,7 +132,7 @@
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
             nav: false,
-            dots: true,
+            dots: false,
             smartSpeed: 1000,
             responsiveClass: true,
             responsive: {

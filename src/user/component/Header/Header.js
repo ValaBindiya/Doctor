@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
@@ -35,28 +36,29 @@ function Header(props) {
                             </div>
                             <nav id="nav-menu-container">
                                 <ul className="nav-menu">
-                                    <li className="menu-active"><a href="index.html">Home</a></li>
-                                    <li><a href="departments.html">departments</a></li>
-                                    <li><a href="doctors.html">doctors</a></li>
-                                    <li className="menu-has-children"><a href>Pages</a>
+                                    <li className="menu-active"><NavLink to='/'>Home</NavLink></li>
+                                    <li><NavLink to='/Departments'>Departments</NavLink></li>
+                                    <li><NavLink to='/Doctor'>doctors</NavLink></li>
+                                    <li className="menu-has-children"><a href class="sf-with-ul">Pages</a>
                                         <ul>
-                                            <li><a href="about.html">about us</a></li>
-                                            <li><a href="elements.html">elements</a></li>
+                                            <li><NavLink to='/About'>about us</NavLink></li>
+                                            <li><NavLink to='/Element'>elements</NavLink></li>
                                         </ul>
                                     </li>
-                                    <li className="menu-has-children"><a href>blog</a>
+                                    <li className="menu-has-children"><a href class="sf-with-ul">blog</a>
                                         <ul>
-                                            <li><a href="blog-home.html">blog home</a></li>
-                                            <li><a href="blog-details.html">blog details</a></li>
+                                            <li><NavLink to='/Blog_Home'>blog home</NavLink></li>
+                                            <li><NavLink to='/Blog_Details'>blog details</NavLink></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><NavLink to='/Contact'>Contact</NavLink></li>
                                 </ul>
                             </nav>{/* #nav-menu-container */}
                         </div>
                     </div>
                 </div>
             </header>
+
             {/* Header Area End */}
         </div>
 
