@@ -1,0 +1,32 @@
+{
+    "doctor":[
+        {
+            "id": 1 ,
+            "name": "ETHEL DAVIS",
+            "specialist": "SR. FACULTY DATA SCIENCE", 
+            "image": "assets/images/doctor1.jpg",
+            "description": "If you are looking at blank cassettes on the web, you may be very confused at the."
+        },
+        {
+            "id": 2 ,
+            "name": "DAND MORIES",
+            "specialist": "SR. FACULTY PLASTIC SURGERY", 
+            "image": "assets/images/doctor2.jpg",
+            "description": "If you are looking at blank cassettes on the web, you may be very confused at the."
+        },
+        {
+            "id": 3 ,
+            "name": "ALIGN BOARD",
+            "specialist": "SR. FACULTY DATA SCIENCE", 
+            "image": "assets/images/doctor3.jpg",
+            "description": "If you are looking at blank cassettes on the web, you may be very confused at the."
+        },
+        {
+            "id": 4  ,
+            "name": "ESON LIMIT",
+            "specialist": "SR. FACULTY PLASTIC SURGERY", 
+            "image": "assets/images/doctor4.jpg",
+            "description": "If you are looking at blank cassettes on the web, you may be very confused at the."
+        }
+    ]
+}
