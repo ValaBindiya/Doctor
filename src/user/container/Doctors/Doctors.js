@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Doctors(props) {
 
@@ -54,27 +54,30 @@ function Doctors(props) {
                                 doctorData.map((v) => (
 
                                     <div className="col-lg-3 col-sm-6">
-                                        <div className="single-doctor mb-4 mb-lg-0">
-                                            <div className="doctor-img">
-                                                <img src={v.image} alt className="img-fluid" />
-                                            </div>
-                                            <div className="content-area">
-                                                <div className="doctor-name text-center">
-                                                    <h3>{v.name}</h3>
-                                                    <h6>{v.specialist}</h6>
+                                        <Link to={`/doctor/${v.id}`} >
+                                            <div className="single-doctor mb-4 mb-lg-0">
+                                                <div className="doctor-img">
+                                                    <img src={v.image} alt className="img-fluid" />
                                                 </div>
-                                                <div className="doctor-text text-center">
-                                                    <p>{v.description}</p>
-                                                    <ul className="doctor-icon">
-                                                        <li><a href="#"><i className="fa fa-facebook" /></a><a /></li><a>
-                                                        </a><li><a /><a href="#"><i className="fa fa-twitter" /></a><a /></li><a>
-                                                        </a><li><a /><a href="#"><i className="fa fa-linkedin" /></a><a /></li><a>
-                                                        </a><li><a /><a href="#"><i className="fa fa-pinterest" /></a><a /></li><a>
-                                                        </a></ul><a>
+                                                <div className="content-area">
+                                                    <div className="doctor-name text-center">
+                                                        <h3>{v.name}</h3>
+                                                        <h6>{v.specialist}</h6>
+                                                    </div>
+                                                    <div className="doctor-text text-center">
+                                                        <p>{v.description}</p>
+                                                        <ul className="doctor-icon">
+                                                            <li><a href="#"><i className="fa fa-facebook" /></a><a /></li><a>
+                                                            </a><li><a /><a href="#"><i className="fa fa-twitter" /></a><a /></li><a>
+                                                            </a><li><a /><a href="#"><i className="fa fa-linkedin" /></a><a /></li><a>
+                                                            </a><li><a /><a href="#"><i className="fa fa-pinterest" /></a><a /></li><a>
+                                                            </a></ul><a>
+                                                        </a></div><a>
                                                     </a></div><a>
-                                                </a></div><a>
-                                            </a></div><a>
-                                        </a></div>
+                                                </a></div>
+                                        </Link>
+                                    </div>
+
                                 ))
                             }
 
@@ -170,8 +173,8 @@ function Doctors(props) {
                 {/* Hotline Area End */}
 
 
-            </div>
-        </div>
+            </div >
+        </div >
         // </div >
 
 

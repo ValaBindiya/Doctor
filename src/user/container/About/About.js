@@ -1,7 +1,35 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useParams } from 'react-router-dom';
 
 function About(props) {
+
+    const { id } = useParams();
+
+    const [doctor, setDoctor] = useState([]);
+    console.log(doctor);
+
+    const getData = async () => {
+
+        try {
+            const response = await fetch("http://localhost:5000/doctor");
+            const data = await response.json()
+
+            const ans = data.find((v) => v.id === id)
+            setDoctor(ans)
+            console.log(ans);
+
+        } catch (error) {
+            console.log(error.message);
+        }
+
+       
+
+    }
+
+    useEffect((v) => {
+        getData()
+    }, [])
+
     return (
         <div>
             {/* Banner Area Starts */}
@@ -22,7 +50,7 @@ function About(props) {
                     <div className="row">
                         <div className="col-lg-5 align-self-center">
                             <div className="welcome-img">
-                                <img src="assets/images/welcome.png" alt />
+                                <img src="../assets/images/welcome.png" alt />
                             </div>
                         </div>
                         <div className="col-lg-7">
@@ -51,15 +79,15 @@ function About(props) {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="single-patient mb-4">
-                                <img src="assets/images/patient1.png" alt />
-                                <h3>daren jhonson</h3>
-                                <h5>hp specialist</h5>
+                                <img src={`../${doctor.image}`} alt />
+                                <h3>{doctor.name}</h3>
+                                <h5>{doctor.specialist}</h5>
                                 <p className="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
                             </div>
                             <div className="single-patient">
-                                <img src="assets/images/patient2.png" alt />
-                                <h3>black heiden</h3>
-                                <h5>hp specialist</h5>
+                                <img src={`../${doctor.image}`} alt />
+                                <h3>{doctor.name}</h3>
+                                <h5>{doctor.specialist}</h5>
                                 <p className="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
                             </div>
                         </div>

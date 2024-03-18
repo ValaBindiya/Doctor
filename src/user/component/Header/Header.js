@@ -32,7 +32,7 @@ function Header(props) {
                     <div className="container">
                         <div className="row align-items-center justify-content-between d-flex">
                             <div id="logo">
-                                <a href="index.html"><img src="assets/images/logo/logo.png" alt title /></a>
+                                <a href="index.html"><img src="../assets/images/logo/logo.png" alt title /></a>
                             </div>
                             <nav id="nav-menu-container">
                                 <ul className="nav-menu">
